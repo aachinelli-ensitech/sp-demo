@@ -37,12 +37,13 @@ export default [
             extract: true,
             extensions: ['.css', '.scss'],
             use: ['sass'],
-        }),
+        })
     ],
   },
   {
     input: "dist/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
+    external: [/\.scss$/],
   },
 ];
