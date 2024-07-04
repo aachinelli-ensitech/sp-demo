@@ -9,4 +9,3 @@ node_modules
 .storybook/*.tsx
 .storybook/*.json
 docs/
-*.stories.tsx
