@@ -1,6 +1,6 @@
 {
   "name": "sp-demo",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "scripts": {
     "build:types": "tsc --emitDeclarationOnly",
     "build": "npm run build:types && rollup -c",
