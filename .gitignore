@@ -10,3 +10,4 @@ node_modules
 .storybook/*.json
 docs/
 *.stories.tsx
+playground
