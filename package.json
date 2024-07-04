@@ -1,6 +1,6 @@
 {
   "name": "sp-demo",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "scripts": {
     "build:types": "tsc --emitDeclarationOnly",
     "build": "npm run build:types && rollup -c",
@@ -43,9 +43,7 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
-    "dist",
-    "src/components",
-    "src/styles"
+    "dist"
   ],
   "types": "dist/index.d.ts",
   "type": "module"

@@ -1,15 +1,12 @@
 import React from "react";
+import styles from "./Button.module.scss";
 
 export interface ButtonProps {
   label: string;
-  type?: "primary" | "secondary" | "tertiary";
-  onClick?: () => void;
 }
 
-const getStyles = (...args: any) => ["button", ...args].filter(Boolean).join(" ")
-
-const Button: React.FC<ButtonProps> = ({ label, type = "primary", onClick }) => {
-  return <button className={getStyles(type)} onClick={onClick}>{label}</button>;
+const Button: React.FC<ButtonProps> = ({ label }) => {
+  return <button className={styles.button}>{label}</button>;
 };
 
 export default Button;
