@@ -1,2 +1,11 @@
 dist
 node_modules
+*storybook.log
+.storybook/
+.storybook-static/
+.storybook/*.js
+.storybook/*.ts
+.storybook/*.jsx
+.storybook/*.tsx
+.storybook/*.json
+docs/
