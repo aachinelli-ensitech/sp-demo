@@ -23,10 +23,12 @@ const Sidebar: React.FC<SidebarProps> = ({ menuItems }) => {
   return (
     <div className={`${styles.sidebar} ${collapsed ? styles.collapsed : ''}`}>
       <div className={styles.header}>
-        <div className={styles.logo}>
-          {/* <img src="logo.png" alt="Provisor" /> Reemplaza con tu logo */}
-          {!collapsed && <span className={styles.logoText}>Provisor</span>}
-        </div>
+        {
+          !collapsed ?
+          <div className={styles.logo}>
+            <span className={styles.logoPro}>Pro</span><span className={styles.logoVisor}>Visor</span><span className={styles.logoID}>ID</span>
+          </div> : null
+        }
         <button className={styles.toggleButton} onClick={toggleCollapse}>
           {collapsed ? 
             <p>
@@ -42,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ menuItems }) => {
       <ul className={styles.menu}>
         {menuItems.map((item, index) => (
           <li key={index} className={styles.menuItem}>
-            <Button label={item.name} />
+            <Button label={item.name} icon={item.icon} />
           </li>
         ))}
       </ul>

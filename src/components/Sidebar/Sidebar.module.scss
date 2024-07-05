@@ -29,26 +29,32 @@
 
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  align-items: center;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
 
-  img {
-    width: 24px;
-    height: 24px;
+  .logoPro {
+    color: #FFFFFF;
   }
 
-  .logoText {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    margin-left: 5px;
+  .logoVisor {
+    color: #FFFFFF;
+  }
+
+  .logoID {
+    color: #FFFFFF;
+    font-size: 18px;
+    background-color: #d70000;
+    border-radius: 3px;
+    padding: 2px 4px;
+    margin-left: 4px;
   }
 }
 
