@@ -29,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({ menuItems }) => {
       </div>
       <ul className={styles.menu}>
         {menuItems.map((item, index) => (
-          <li key={index} className={styles.menuItem}>
+          <li key={index}>
             <Button label={item.name} icon={item.icon} />
           </li>
         ))}
