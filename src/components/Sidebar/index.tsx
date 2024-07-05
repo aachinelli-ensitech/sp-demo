@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Sidebar.module.scss';
+import Button from '../Button';
+import { FiArrowLeftCircle, FiMenu } from 'react-icons/fi';
 
 interface MenuItem {
   name: string;
@@ -20,17 +22,27 @@ const Sidebar: React.FC<SidebarProps> = ({ menuItems }) => {
 
   return (
     <div className={`${styles.sidebar} ${collapsed ? styles.collapsed : ''}`}>
-      <button className={styles.toggleButton} onClick={toggleCollapse}>
-        {collapsed ? '☰' : '✕'}
-      </button>
-      <ul>
+      <div className={styles.header}>
+        <div className={styles.logo}>
+          {/* <img src="logo.png" alt="Provisor" /> Reemplaza con tu logo */}
+          {!collapsed && <span className={styles.logoText}>Provisor</span>}
+        </div>
+        <button className={styles.toggleButton} onClick={toggleCollapse}>
+          {collapsed ? 
+            <p>
+              <FiMenu />
+            </p>
+            : 
+            <p>
+              <FiArrowLeftCircle />
+            </p>
+          }
+        </button>
+      </div>
+      <ul className={styles.menu}>
         {menuItems.map((item, index) => (
           <li key={index} className={styles.menuItem}>
-            <a href={item.link}>
-              <span className={styles.icon}>{item.icon}</span>
-              {!collapsed && <span className={styles.name}>{item.name}</span>}
-              {collapsed && <span className={styles.tooltip}>{item.name}</span>}
-            </a>
+            <Button label={item.name} />
           </li>
         ))}
       </ul>
