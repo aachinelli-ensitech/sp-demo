@@ -8,9 +8,6 @@ export interface ButtonProps {
   icon?: any;
 }
 
-// const getStyles = (...args: any) =>
-//   ["button", ...args].filter(Boolean).join(" ");
-
 const Button: React.FC<ButtonProps> = ({
   label,
   icon,

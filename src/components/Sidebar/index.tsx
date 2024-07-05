@@ -44,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ menuItems }) => {
       <ul className={styles.menu}>
         {menuItems.map((item, index) => (
           <li key={index} className={styles.menuItem}>
-            <Button label={item.name} icon={item.icon} />
+            <Button label={collapsed ? '' : item.name} icon={item.icon} />
           </li>
         ))}
       </ul>
